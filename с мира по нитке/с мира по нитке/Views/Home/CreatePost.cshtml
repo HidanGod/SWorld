@@ -1,0 +1,51 @@
+﻿@model с_мира_по_нитке.Models.Post
+
+@{
+    ViewBag.Title = "Добавление поста";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Добавление нового поста</h2>
+
+@using (Html.BeginForm())
+{
+    <fieldset>
+        <legend>пост</legend>
+        <p>загаловок <br />
+            @Html.EditorFor(model => model.Zaglav)
+        </p>
+
+        <p>текст<br />
+            @Html.EditorFor(model => model.Text)
+        </p>
+
+        <p>карма<br />
+            @Html.EditorFor(model => model.Karma)
+        </p>
+
+        <p>юрл <br />
+            @Html.EditorFor(model => model.URL)
+        </p>
+        <p>дата <br />
+            @Html.EditorFor(model => model.Date)
+        </p>
+        <p>просмотров<br />
+            @Html.EditorFor(model => model.Prosmotrov)
+        </p>
+        <p>категория <br />
+            @Html.EditorFor(model => model.Category)
+        </p>
+        <p>раздел<br />
+            @Html.EditorFor(model => model.Razdel)
+        </p>
+        <p>краткое<br />
+            @Html.EditorFor(model => model.Kratk)
+        </p>
+        <p>
+            <input type="submit" value="Добавить пост" />
+        </p>
+    </fieldset>
+}
+<div>
+    @Html.ActionLink("К списку игроков", "Index")
+</div>

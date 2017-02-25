@@ -1,0 +1,91 @@
+﻿@model с_мира_по_нитке.Models.User
+
+@{
+    ViewBag.Title = "Добавление пользователя";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Добавление нового пользователя</h2>
+
+@using (Html.BeginForm())
+{
+    <fieldset>
+        <legend>пользователь</legend>
+
+
+        <p>
+            логин пользователя <br />
+            @Html.EditorFor(model => model.Login)
+        </p>
+
+        <p>
+            пароль <br />
+            @Html.EditorFor(model => model.Password)
+        </p>
+
+        <p>
+            имя<br />
+            @Html.EditorFor(model => model.Name)
+        </p>
+
+        <p>
+            емейл  <br />
+            @Html.EditorFor(model => model.Email)
+        </p>
+        <p>
+            номер  <br />
+            @Html.EditorFor(model => model.Phone_Number)
+        </p>
+        <p>
+            роль <br />
+            @Html.EditorFor(model => model.Roles)
+        </p>
+        <p>
+            дата рег <br />
+            @Html.EditorFor(model => model.Date_Registration)
+        </p>
+        <p>
+            дата день рожд <br />
+            @Html.EditorFor(model => model.Date_Birth)
+        </p>
+        <p>
+            подписки <br />
+            @Html.EditorFor(model => model.Follow)
+        </p>
+        <p>
+            пописчики  <br />
+            @Html.EditorFor(model => model.Follower)
+        </p>
+        <p>
+            пол  <br />
+            @Html.EditorFor(model => model.Sex)
+        </p>
+        <p>
+            аватар  <br />
+            @Html.EditorFor(model => model.Avatar)
+        </p>
+        <p>
+            карма  <br />
+            @Html.EditorFor(model => model.Karma)
+        </p>
+        <p>
+            страна <br />
+            @Html.EditorFor(model => model.Country)
+        </p>
+        <p>
+            город <br />
+            @Html.EditorFor(model => model.City)
+        </p>
+        <p>
+            работа  <br />
+            @Html.EditorFor(model => model.Job)
+        </p>
+       
+        <p>
+            <input type="submit" value="Добавить пользователя" />
+        </p>
+    </fieldset>
+}
+<div>
+    @Html.ActionLink("К списку игроков", "Index")
+</div>
